@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Karaduman Oto Yıkama | Seyhan · Adana</title>
+  <meta name="description" content="Karaduman Oto Yıkama — Seyhan, Adana. Oto yıkama ve araç bakım hizmetleri için iletişim ve randevu.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --black:#080a0c;
+      --black2:#101317;
+      --panel:#15191e;
+      --white:#f4f2ed;
+      --muted:#a6abb0;
+      --silver:#d8dde0;
+      --accent:#c9a96e;
+      --line:rgba(255,255,255,.12);
+      --max:1240px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:"DM Sans",sans-serif;
+      background:var(--black);
+      color:var(--white);
+      line-height:1.6;
+    }
+
+    img{
+      display:block;
+      width:100%;
+      object-fit:cover;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    button,input,select,textarea{
+      font:inherit;
+    }
+
+    section{
+      scroll-margin-top:88px;
+    }
+
+    .container{
+      width:min(92%,var(--max));
+      margin:auto;
+    }
+
+    .eyebrow{
+      font-size:12px;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      color:var(--accent);
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    h1,h2,h3{
+      font-family:"Playfair Display",serif;
+      font-weight:500;
+      line-height:1.04;
+    }
+
+    .topbar{
+      background:var(--accent);
+      color:#111;
+      text-align:center;
+      padding:9px 15px;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:1.5px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(8,10,12,.94);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .logo strong{
+      display:block;
+      font-size:20px;
+      letter-spacing:4px;
+      line-height:1;
+    }
+
+    .logo span{
+      display:block;
+      margin-top:7px;
+      color:var(--accent);
+      font-size:9px;
+      letter-spacing:4px;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:28px;
+      font-size:13px;
+      font-weight:600;
+    }
+
+    nav a:hover{
+      color:var(--accent);
+    }
+
+    .nav-cta,
+    .btn{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      min-height:50px;
+      padding:0 24px;
+      border:1px solid var(--accent);
+      background:var(--accent);
+      color:#111;
+      font-weight:700;
+      font-size:13px;
+      cursor:pointer;
+      transition:.25s ease;
+    }
+
+    .nav-cta:hover,
+    .btn:hover{
+      background:#e0c28a;
+    }
+
+    .btn-outline{
+      background:transparent;
+      color:var(--white);
+      border-color:rgba(255,255,255,.45);
+    }
+
+    .btn-outline:hover{
+      background:var(--white);
+      color:#111;
+    }
+
+    .menu{
+      display:none;
+      border:0;
+      background:none;
+      color:white;
+      font-size:28px;
+      cursor:pointer;
+    }
+
+    .hero{
+      min-height:790px;
+      position:relative;
+      display:flex;
+      align-items:center;
+      background:
+        linear-gradient(90deg,rgba(5,7,9,.96) 0%,rgba(5,7,9,.80) 45%,rgba(5,7,9,.25) 100%),
+        url("https://images.unsplash.com/photo-1552930294-6b595f4c2974?auto=format&fit=crop&w=2000&q=85") center/cover;
+    }
+
+    .hero-content{
+      max-width:790px;
+      padding:120px 0;
+    }
+
+    .hero h1{
+      font-size:clamp(56px,8vw,112px);
+      max-width:900px;
+      letter-spacing:-3px;
+    }
+
+    .hero h1 em{
+      color:var(--accent);
+      font-weight:500;
+    }
+
+    .hero p{
+      max-width:620px;
+      margin:30px 0;
+      color:#d2d4d5;
+      font-size:17px;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .about{
+      background:#eeeae2;
+      color:#151515;
+      padding:120px 0;
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1.1fr;
+      gap:80px;
+      align-items:center;
+    }
+
+    .about img{
+      height:650px;
+    }
+
+    .about h2,
+    .services h2,
+    .gallery h2,
+    .contact h2{
+      font-size:clamp(45px,6vw,76px);
+      margin-bottom:28px;
+    }
+
+    .about p{
+      color:#575757;
+      margin-bottom:18px;
+      max-width:650px;
+    }
+
+    .facts{
+      margin-top:45px;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      border-top:1px solid #c7c3bb;
+    }
+
+    .fact{
+      padding:25px 15px 25px 0;
+      border-bottom:1px solid #c7c3bb;
+    }
+
+    .fact strong{
+      display:block;
+      font-family:"Playfair Display",serif;
+      font-size:27px;
+    }
+
+    .fact span{
+      display:block;
+      margin-top:6px;
+      color:#777;
+      font-size:12px;
+    }
+
+    .services{
+      padding:120px 0;
+      background:var(--black);
+    }
+
+    .services-head{
+      display:flex;
+      justify-content:space-between;
+      gap:50px;
+      align-items:flex-end;
+      margin-bottom:55px;
+    }
+
+    .services-head p{
+      max-width:480px;
+      color:var(--muted);
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      border-top:1px solid var(--line);
+    }
+
+    .service{
+      min-height:260px;
+      padding:42px;
+      border-right:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      transition:.25s;
+    }
+
+    .service:hover{
+      background:var(--panel);
+    }
+
+    .service-num{
+      color:var(--accent);
+      font-size:12px;
+      letter-spacing:2px;
+    }
+
+    .service h3{
+      font-size:35px;
+      margin:35px 0 15px;
+    }
+
+    .service p{
+      color:var(--muted);
+      max-width:460px;
+    }
+
+    .editorial{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      min-height:720px;
+      background:#dedbd4;
+      color:#111;
+    }
+
+    .editorial-image{
+      background:url("https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1500&q=85") center/cover;
+    }
+
+    .editorial-copy{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:8vw;
+    }
+
+    .editorial-copy h2{
+      font-size:clamp(48px,6vw,80px);
+      margin-bottom:28px;
+    }
+
+    .editorial-copy p{
+      color:#555;
+      max-width:560px;
+      font-size:17px;
+    }
+
+    .gallery{
+      padding:120px 0;
+      background:#efede8;
+      color:#151515;
+    }
+
+    .gallery-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:40px;
+      margin-bottom:45px;
+    }
+
+    .gallery-head p{
+      max-width:470px;
+      color:#666;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr 1fr;
+      grid-auto-rows:300px;
+      gap:10px;
+    }
+
+    .gallery-grid img{
+      height:100%;
+    }
+
+    .gallery-grid img:nth-child(1){
+      grid-row:span 2;
+    }
+
+    .gallery-grid img:nth-child(4){
+      grid-column:span 2;
+    }
+
+    .preview-note{
+      margin-top:22px;
+      font-size:12px;
+      color:#777;
+    }
+
+    .reputation{
+      padding:120px 0;
+      background:var(--black2);
+    }
+
+    .rep-grid{
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:80px;
+      align-items:center;
+    }
+
+    .score{
+      font-family:"Playfair Display",serif;
+      font-size:120px;
+      line-height:1;
+    }
+
+    .stars{
+      color:var(--accent);
+      letter-spacing:5px;
+      margin:20px 0 10px;
+      font-size:21px;
+    }
+
+    .rep-copy h2{
+      font-size:clamp(45px,5vw,70px);
+      margin-bottom:25px;
+    }
+
+    .rep-copy > p{
+      color:var(--muted);
+      max-width:650px;
+    }
+
+    .quality-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      margin-top:40px;
+      border-top:1px solid var(--line);
+    }
+
+    .quality{
+      padding:22px 10px 22px 0;
+      border-bottom:1px solid var(--line);
+      color:#d9dbdc;
+    }
+
+    .faq{
+      background:#ece9e2;
+      color:#151515;
+      padding:120px 0;
+    }
+
+    .faq-grid{
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:80px;
+    }
+
+    .faq h2{
+      font-size:clamp(45px,5vw,70px);
+    }
+
+    details{
+      border-top:1px solid #c8c4bb;
+      padding:22px 0;
+    }
+
+    details:last-child{
+      border-bottom:1px solid #c8c4bb;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      list-style:none;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    summary::after{
+      content:"+";
+      font-size:22px;
+    }
+
+    details[open] summary::after{
+      content:"−";
+    }
+
+    details p{
+      color:#666;
+      padding-top:15px;
+      max-width:700px;
+    }
+
+    .contact{
+      padding:120px 0;
+      background:var(--black);
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:90px;
+    }
+
+    .contact-info p{
+      color:var(--muted);
+      margin-bottom:30px;
+    }
+
+    .contact-list{
+      border-top:1px solid var(--line);
+    }
+
+    .contact-item{
+      padding:20px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .contact-item small{
+      display:block;
+      color:var(--accent);
+      text-transform:uppercase;
+      letter-spacing:2px;
+      margin-bottom:5px;
+    }
+
+    .contact-item a:hover{
+      color:var(--accent);
+    }
+
+    form{
+      background:var(--panel);
+      padding:45px;
+    }
+
+    form h3{
+      font-size:36px;
+      margin-bottom:30px;
+    }
+
+    .field{
+      margin-bottom:18px;
+    }
+
+    label{
+      display:block;
+      font-size:12px;
+      color:#b9bdc0;
+      margin-bottom:8px;
+    }
+
+    input,select,textarea{
+      width:100%;
+      border:1px solid #363b41;
+      background:#0e1114;
+      color:white;
+      padding:15px;
+      outline:none;
+    }
+
+    input:focus,select:focus,textarea:focus{
+      border-color:var(--accent);
+    }
+
+    textarea{
+      min-height:110px;
+      resize:vertical;
+    }
+
+    form .btn{
+      width:100%;
+      border:none;
+      margin-top:5px;
+    }
+
+    footer{
+      padding:35px 0 100px;
+      background:#050607;
+      border-top:1px solid var(--line);
+      color:#85898d;
+      font-size:12px;
+    }
+
+    .footer-row{
+      display:flex;
+      justify-content:space-between;
+      gap:25px;
+      flex-wrap:wrap;
+    }
+
+    .mobile-whatsapp{
+      display:none;
+    }
+
+    @media(max-width:900px){
+      nav{
+        display:none;
+        position:absolute;
+        top:78px;
+        left:0;
+        right:0;
+        background:#0b0d10;
+        flex-direction:column;
+        align-items:stretch;
+        padding:25px 5%;
+        border-bottom:1px solid var(--line);
+      }
+
+      nav.open{
+        display:flex;
+      }
+
+      .menu{
+        display:block;
+      }
+
+      .hero{
+        min-height:700px;
+        background:
+          linear-gradient(rgba(5,7,9,.68),rgba(5,7,9,.88)),
+          url("https://images.unsplash.com/photo-1552930294-6b595f4c2974?auto=format&fit=crop&w=1200&q=85") center/cover;
+      }
+
+      .about-grid,
+      .rep-grid,
+      .faq-grid,
+      .contact-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+      }
+
+      .about img{
+        height:500px;
+      }
+
+      .services-head,
+      .gallery-head{
+        display:block;
+      }
+
+      .services-head p,
+      .gallery-head p{
+        margin-top:15px;
+      }
+
+      .service-grid{
+        grid-template-columns:1fr;
+      }
+
+      .editorial{
+        grid-template-columns:1fr;
+      }
+
+      .editorial-image{
+        min-height:500px;
+      }
+
+      .gallery-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .gallery-grid img:nth-child(1),
+      .gallery-grid img:nth-child(4){
+        grid-row:auto;
+        grid-column:auto;
+      }
+
+      .score{
+        font-size:90px;
+      }
+    }
+
+    @media(max-width:600px){
+      .topbar{
+        font-size:10px;
+      }
+
+      .hero h1{
+        font-size:55px;
+        letter-spacing:-2px;
+      }
+
+      .hero-content{
+        padding:90px 0;
+      }
+
+      .about,
+      .services,
+      .gallery,
+      .reputation,
+      .faq,
+      .contact{
+        padding:80px 0;
+      }
+
+      .about img{
+        height:420px;
+      }
+
+      .facts,
+      .quality-grid{
+        grid-template-columns:1fr;
+      }
+
+      .gallery-grid{
+        grid-template-columns:1fr;
+        grid-auto-rows:330px;
+      }
+
+      form{
+        padding:28px 20px;
+      }
+
+      .mobile-whatsapp{
+        display:block;
+        position:fixed;
+        z-index:1200;
+        left:12px;
+        right:12px;
+        bottom:12px;
+      }
+
+      .mobile-whatsapp a{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:55px;
+        background:var(--accent);
+        color:#111;
+        font-weight:800;
+        box-shadow:0 10px 35px rgba(0,0,0,.35);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    SEYHAN · ADANA &nbsp; | &nbsp; İLETİŞİM: 0532 785 32 38
+  </div>
+
+  <header>
+    <div class="container nav">
+
+      <a href="#home" class="logo">
+        <strong>KARADUMAN</strong>
+        <span>OTO YIKAMA</span>
+      </a>
+
+      <button class="menu" id="menuButton" aria-label="Menüyü aç">☰</button>
+
+      <nav id="navMenu">
+        <a href="#home">Ana Sayfa</a>
+        <a href="#about">Hakkımızda</a>
+        <a href="#services">Hizmetler</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#contact">İletişim</a>
+        <a class="nav-cta" href="https://wa.me/905327853238?text=Merhaba%2C%20oto%20y%C4%B1kama%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">
+          Randevu / Bilgi
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+
+          <div class="eyebrow">AUTO CARE · SEYHAN / ADANA</div>
+
+          <h1>
+            Aracınızın<br>
+            <em>ışıltısını</em> geri kazanın.
+          </h1>
+
+          <p>
+            Karaduman Oto Yıkama için hazırlanan bu dijital deneyim;
+            araç temizliği, bakım bilgileri ve hızlı iletişimi tek noktada
+            buluşturmak üzere tasarlandı.
+          </p>
+
+          <div class="actions">
+            <a class="btn" href="https://wa.me/905327853238?text=Merhaba%2C%20Karaduman%20Oto%20Y%C4%B1kama%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">
+              WhatsApp'tan Ulaş
+            </a>
+
+            <a class="btn btn-outline" href="#services">
+              Hizmetleri İncele
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+
+        <img
+          src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1200&q=85"
+          alt="Temsili profesyonel araç bakım görseli"
+          loading="lazy"
+        >
+
+        <div>
+          <div class="eyebrow">KARADUMAN OTO YIKAMA</div>
+
+          <h2>
+            Temiz görünüm.<br>
+            Özenli bakım.
+          </h2>
+
+          <p>
+            Karaduman Oto Yıkama, Seyhan / Adana bölgesinde araç temizliği
+            ve bakım kategorisinde hizmet veren bir işletmedir.
+          </p>
+
+          <p>
+            Bu satış önizlemesi, müşterilerin işletmeye daha kolay ulaşabilmesi,
+            hizmet kategorilerini görebilmesi ve telefon ya da WhatsApp üzerinden
+            hızlı iletişim kurabilmesi amacıyla hazırlanmıştır.
+          </p>
+
+          <div class="facts">
+
+            <div class="fact">
+              <strong>4.9 ★</strong>
+              <span>Çevrimiçi işletme kayıtlarında görünen puan</span>
+            </div>
+
+            <div class="fact">
+              <strong>Seyhan</strong>
+              <span>Adana</span>
+            </div>
+
+            <div class="fact">
+              <strong>07:00–19:30</strong>
+              <span>Güncel çevrimiçi kayıtlarda görünen saatler</span>
+            </div>
+
+            <div class="fact">
+              <strong>WhatsApp</strong>
+              <span>Hızlı iletişim</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+
+        <div class="services-head">
+          <div>
+            <div class="eyebrow">HİZMETLER</div>
+            <h2>Aracınıza hak ettiği özen.</h2>
+          </div>
+
+          <p>
+            Çevrimiçi kaynaklarda güvenle doğrulayabildiğimiz temel hizmet
+            kategorileri aşağıda gösterilmektedir. İşletme onayı sonrasında
+            hizmet listesi ayrıntılandırılabilir.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service">
+            <span class="service-num">01</span>
+            <h3>Oto Yıkama</h3>
+            <p>
+              Aracınızın temiz ve bakımlı görünümünü korumaya yönelik
+              oto yıkama hizmetleri.
+            </p>
+          </article>
+
+          <article class="service">
+            <span class="service-num">02</span>
+            <h3>Araç Detailing</h3>
+            <p>
+              Çevrimiçi işletme kategorilerinde yer alan araç detailing
+              hizmetleri hakkında bilgi almak için doğrudan işletmeyle
+              iletişime geçebilirsiniz.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="editorial">
+
+      <div class="editorial-image" role="img" aria-label="Temsili araç temizliği görseli"></div>
+
+      <div class="editorial-copy">
+        <div class="eyebrow">AUTO CARE</div>
+
+        <h2>
+          Detaylarda<br>
+          fark yaratın.
+        </h2>
+
+        <p>
+          Temiz bir otomobil yalnızca iyi görünmez; aracınıza gösterdiğiniz
+          özeni de yansıtır. Hızlı iletişim ve sade bir dijital deneyimle
+          ihtiyacınız olan hizmet hakkında kolayca bilgi alın.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="container">
+
+        <div class="gallery-head">
+          <div>
+            <div class="eyebrow">GÖRÜNÜM</div>
+            <h2>Temizlik. Parlaklık. Detay.</h2>
+          </div>
+
+          <p>
+            Bu satış önizlemesindeki fotoğraflar temsili görsellerdir.
+            İşletmenin onayından sonra Karaduman Oto Yıkama'nın kendi
+            araç ve işletme fotoğraflarıyla değiştirilebilir.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+
+          <img
+            src="https://images.unsplash.com/photo-1552930294-6b595f4c2974?auto=format&fit=crop&w=1000&q=85"
+            alt="Temsili oto bakım görseli"
+            loading="lazy"
+          >
+
+          <img
+            src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=900&q=85"
+            alt="Temsili oto yıkama görseli"
+            loading="lazy"
+          >
+
+          <img
+            src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=900&q=85"
+            alt="Temsili otomobil görseli"
+            loading="lazy"
+          >
+
+          <img
+            src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85"
+            alt="Temsili premium otomobil görseli"
+            loading="lazy"
+          >
+
+          <img
+            src="https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=900&q=85"
+            alt="Temsili araç bakım görseli"
+            loading="lazy"
+          >
+
+        </div>
+
+        <p class="preview-note">
+          * Görseller satış önizlemesi amacıyla kullanılan temsili görsellerdir;
+          işletmeye ait gerçek fotoğraflar olarak sunulmamaktadır.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="reputation">
+      <div class="container rep-grid">
+
+        <div>
+          <div class="score">4.9</div>
+          <div class="stars">★★★★★</div>
+          <p style="color:#8f9498;font-size:12px;">
+            Çevrimiçi işletme kayıtlarında görünen puan
+          </p>
+        </div>
+
+        <div class="rep-copy">
+          <div class="eyebrow">DİJİTAL GÜVEN</div>
+
+          <h2>
+            Güçlü ilk izlenim,<br>
+            kolay iletişim.
+          </h2>
+
+          <p>
+            Modern bir işletme sitesi; müşterinin hizmetleri anlamasını,
+            konumu bulmasını ve işletmeyle doğrudan iletişime geçmesini
+            kolaylaştırır.
+          </p>
+
+          <div class="quality-grid">
+            <div class="quality">Oto yıkama</div>
+            <div class="quality">Araç detailing</div>
+            <div class="quality">Telefonla hızlı iletişim</div>
+            <div class="quality">WhatsApp bağlantısı</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container faq-grid">
+
+        <div>
+          <div class="eyebrow">SIK SORULANLAR</div>
+          <h2>Merak ettikleriniz.</h2>
+        </div>
+
+        <div>
+
+          <details>
+            <summary>Nasıl bilgi veya randevu alabilirim?</summary>
+            <p>
+              Sayfadaki WhatsApp butonunu kullanarak ya da
+              0532 785 32 38 numarasını arayarak işletmeyle iletişim
+              kurabilirsiniz.
+            </p>
+          </details>
+
+          <details>
+            <summary>Hangi hizmetler bulunuyor?</summary>
+            <p>
+              Çevrimiçi kaynaklarda oto yıkama ve araç detailing
+              kategorilerini doğrulayabildik. Özel bir uygulama veya
+              ek hizmet için işletmeden güncel bilgi almanızı öneririz.
+            </p>
+          </details>
+
+          <details>
+            <summary>Çalışma saatleri nedir?</summary>
+            <p>
+              Güncel çevrimiçi işletme kayıtlarında 07:00–19:30 saatleri
+              görünmektedir. Gitmeden önce işletmeden teyit edilmesi önerilir.
+            </p>
+          </details>
+
+          <details>
+            <summary>Konuma nasıl ulaşabilirim?</summary>
+            <p>
+              İletişim bölümündeki “Haritada Gör” bağlantısı işletme adıyla
+              Google Maps araması açar.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+
+        <div class="contact-info">
+          <div class="eyebrow">İLETİŞİM</div>
+
+          <h2>
+            Aracınız için<br>
+            bilgi alın.
+          </h2>
+
+          <p>
+            Hizmet detayları ve güncel uygunluk için Karaduman Oto Yıkama
+            ile telefon veya WhatsApp üzerinden iletişime geçebilirsiniz.
+          </p>
+
+          <div class="contact-list">
+
+            <div class="contact-item">
+              <small>Telefon / WhatsApp</small>
+              <a href="tel:+905327853238">0532 785 32 38</a>
+            </div>
+
+            <div class="contact-item">
+              <small>Konum</small>
+              <span>Seyhan · Adana</span>
+            </div>
+
+            <div class="contact-item">
+              <small>Çalışma Saatleri</small>
+              <span>Çevrimiçi kayıtlarda: 07:00–19:30</span>
+            </div>
+
+            <div class="contact-item">
+              <small>Harita</small>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Karaduman+Oto+Yikama+Seyhan+Adana"
+                target="_blank"
+                rel="noopener"
+              >
+                Google Maps'te Gör →
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <form id="appointmentForm">
+
+          <h3>WhatsApp'tan bilgi alın.</h3>
+
+          <div class="field">
+            <label for="name">Adınız</label>
+            <input id="name" type="text" placeholder="Adınızı yazın" required>
+          </div>
+
+          <div class="field">
+            <label for="service">İlgilendiğiniz hizmet</label>
+            <select id="service" required>
+              <option value="">Seçiniz</option>
+              <option>Oto Yıkama</option>
+              <option>Araç Detailing</option>
+              <option>Hizmetler Hakkında Bilgi</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="date">Tercih edilen tarih</label>
+            <input id="date" type="date">
+          </div>
+
+          <div class="field">
+            <label for="note">Notunuz</label>
+            <textarea id="note" placeholder="Araç veya hizmet hakkında notunuzu yazabilirsiniz."></textarea>
+          </div>
+
+          <button class="btn" type="submit">
+            WhatsApp Mesajı Oluştur
+          </button>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <span>© 2026 Karaduman Oto Yıkama</span>
+      <span>Web sitesi tasarım önizlemesi · Resmî site değildir.</span>
+    </div>
+  </footer>
+
+  <div class="mobile-whatsapp">
+    <a
+      href="https://wa.me/905327853238?text=Merhaba%2C%20Karaduman%20Oto%20Y%C4%B1kama%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+      target="_blank"
+      rel="noopener"
+    >
+      WhatsApp'tan Bilgi Al
+    </a>
+  </div>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const navMenu = document.getElementById("navMenu");
+
+    menuButton.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+    });
+
+    document.querySelectorAll("#navMenu a").forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+      });
+    });
+
+    const dateInput = document.getElementById("date");
+    const today = new Date();
+    const localToday =
+      today.getFullYear() + "-" +
+      String(today.getMonth() + 1).padStart(2, "0") + "-" +
+      String(today.getDate()).padStart(2, "0");
+
+    dateInput.min = localToday;
+
+    document.getElementById("appointmentForm").addEventListener("submit", function(event){
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const service = document.getElementById("service").value;
+      const date = document.getElementById("date").value;
+      const note = document.getElementById("note").value.trim();
+
+      let message = "Merhaba, Karaduman Oto Yıkama hakkında bilgi almak istiyorum.\n\n";
+      message += "Ad: " + name + "\n";
+      message += "Hizmet: " + service + "\n";
+
+      if(date){
+        message += "Tercih edilen tarih: " + date + "\n";
+      }
+
+      if(note){
+        message += "Not: " + note + "\n";
+      }
+
+      const whatsappURL =
+        "https://wa.me/905327853238?text=" + encodeURIComponent(message);
+
+      window.open(whatsappURL, "_blank", "noopener");
+    });
+  </script>
+
+</body>
+</html>
